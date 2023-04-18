@@ -1,78 +1,73 @@
+# UniFormerV2
+
+This repo is the official implementation of ["UniFormerV2: Spatiotemporal Learning by Arming Image ViTs with Video UniFormer"](https://arxiv.org/abs/2211.09552).
+By [Kunchang Li](https://scholar.google.com/citations?user=D4tLSbsAAAAJ), [Yali Wang](https://scholar.google.com/citations?user=hD948dkAAAAJ), [Yinan He](https://dblp.org/pid/93/7763.html), [Yizhuo Li](https://scholar.google.com/citations?user=pyBSGjgAAAAJ), [Yi Wang](https://scholar.google.com.hk/citations?hl=zh-CN&user=Xm2M8UwAAAAJ), [Limin Wang](https://scholar.google.com/citations?user=HEuN8PcAAAAJ) and [Yu Qiao](https://scholar.google.com/citations?user=gFtI-8QAAAAJ&hl).
+
+## Update
 
 
-This repo is the solution for 7th AICITY (2023) Challenge Track 3 - Naturalistic Driving Action Recognition.
-![framework](framework.png)
+***02/13/2023***
 
-## Running environment
+UniFormerV2 has been integrated into [MMAction2](https://github.com/open-mmlab/mmaction2/tree/dev-1.x/configs/recognition/uniformerv2). Training code will be provided soon! 😄
 
-Please refer to the [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) to install pytorch and pyslow.
+***11/20/2022***
 
-## Preprocessing
-TODO
+We give a video demo in [hugging face](https://huggingface.co/spaces/Andy1621/uniformerv2_demo). Have a try! 😄
 
-## Train
-It needs 2 RTX3090 GPUS (totally 48G ) to perform the training experiments.
-First run this command to go into the training folder. 
-```bash
-cd Train
-```
-In the [exp/aicity3](Train/exp/aicity3) folder, there are folders of experiments of different setting.
-To train a model, you should first specific the DATA.PATH_TO_DATA_DIR in the run.sh as your own path. Then please run:
-```
-CUDA_VISIBLE_DEVICES=[your_GPU_indexes] python exp/aicity3/[EXPERIMENTS_FOLDER]/run.sh
-```
-The training results are in the  _experiments_fold_, shown as follows:
->   * EXPERIMENTS_FOLDER
->     * checkpoint_[VIEW]_[TRAIN_MANNER]_zero
->       * checkpoints
->         * checkpoint_epoch_000**.pyth
->         * ...
->       * stdout.log
->       * ...
->     * run.sh
->      * config.yaml
+***11/19/2022***
 
-We use the model weights of the last epoch to predict the snippet-level action probabilities.
+We give a blog in Chinese [Zhihu](https://zhuanlan.zhihu.com/p/584669411).
+
+***11/18/2022***
+
+All the code, models and configs are provided. Don't hesitate to open an issue if you have any problem! 🙋🏻 
+
+## Introduction
+
+In UniFormerV2, we propose a generic paradigm to build a powerful family of video networks, by arming the pre-trained [ViTs](https://github.com/rwightman/pytorch-image-models/blob/main/timm/models/vision_transformer.py) with efficient [UniFormer](https://github.com/Sense-X/UniFormer) designs. It inherits the concise style of the UniFormer block. But it contains brand- new local and global relation aggregators, which allow for preferable accuracy-computation balance by seamlessly integrating advantages from both ViTs and UniFormer.
+![teaser](img/framework.png)
+It gets the state-of-the-art recognition performance on 8 popular video benchmarks, including scene-related Kinetics-400/600/700 and Moments in Time, temporal-related Something-Something V1/V2, untrimmed ActivityNet and HACS. In particular, **it is the first model to achieve 90% top-1 accuracy on Kinetics-400**.
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-classification-on-kinetics-400)](https://paperswithcode.com/sota/action-classification-on-kinetics-400?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-classification-on-kinetics-600)](https://paperswithcode.com/sota/action-classification-on-kinetics-600?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-classification-on-kinetics-700)](https://paperswithcode.com/sota/action-classification-on-kinetics-700?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-classification-on-moments-in-time)](https://paperswithcode.com/sota/action-classification-on-moments-in-time?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-classification-on-activitynet)](https://paperswithcode.com/sota/action-classification-on-activitynet?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-recognition-on-hacs)](https://paperswithcode.com/sota/action-recognition-on-hacs?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-recognition-in-videos-on-something-1)](https://paperswithcode.com/sota/action-recognition-in-videos-on-something-1?p=uniformerv2-spatiotemporal-learning-by-arming)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/uniformerv2-spatiotemporal-learning-by-arming/action-recognition-in-videos-on-something)](https://paperswithcode.com/sota/action-recognition-in-videos-on-something?p=uniformerv2-spatiotemporal-learning-by-arming)
+
+## Model Zoo
+
+All the models can be found in [MODEL_ZOO](MODEL_ZOO.md).
+
+## Instructions
+
+See [INSTRUCTIONS](INSTRUCTIONS.md) for more details about:
+- Environment installation
+- Dataset preparation
+- Training and validation
 
 
-## Inference
-The format of inference should be similar with the A2 dataset, which is provided by 2023 AI City Challenge. The format of A2 dataset as follows:
->   * A2
->     * user_id_*
->       * CAMERAVIEW_user_id_*.MP4
->       * CAMERAVIEW_user_id_*.MP4
->       * CAMERAVIEW_user_id_*.MP4
->       * ...
->     * video_ids.csv
+##  Cite Uniformer
 
-### Reproduce
-The checkpoints after trainning process can be downloaded [here](https://baidu.com), which includes all the checkpoints of different trainning datatypes, camera views and sampling strategy. After downloading all the checkpoints, please put all files into ./X3D_inference/checkpoint_submit/
-```bash
-cd Inference
-```
-The inference has two stages, including action probability calibration result generation and efficient action localization. Please run the following commands to reproduce our results in sequence.
-```bash
-python generation_probability.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR A2
-```
-The results of the first stage will appear in ./probability_results
+If you find this repository useful, please use the following BibTeX entry for citation.
 
-```bash
-python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR A2
-```
-DATA.PATH_TO_DATA_DIR: path to Test Dataset (e.g., A2, B)
-Submission file appeare in ./output
-
-#### Quickly reproduce A2 results
-If you want to reproduce it quickly, the npy files for the first stage can be downloaded from [here](https://baidu.com). After downloading, please put these files in ./probability_results. Then run the following command.
-
-```bash
-python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR A2
+```latex
+@misc{li2022uniformerv2,
+      title={UniFormerV2: Spatiotemporal Learning by Arming Image ViTs with Video UniFormer}, 
+      author={Kunchang Li and Yali Wang and Yinan He and Yizhuo Li and Yi Wang and Limin Wang and Yu Qiao},
+      year={2022},
+      eprint={2211.09552},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
+## License
 
+This project is released under the MIT license. Please see the [LICENSE](LICENSE) file for more information.
 
 ## Acknowledgement
 
-This repository is built based on [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) and [Winner of 2022](https://github.com/VTCC-uTVM) repository.
-
-
+This repository is built based on [UniFormer](https://github.com/Sense-X/UniFormer) and [SlowFast](https://github.com/facebookresearch/SlowFast) repository.
