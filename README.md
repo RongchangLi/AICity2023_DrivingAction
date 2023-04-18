@@ -74,12 +74,12 @@ There are two steps in the inference process. First, to generate action probabil
 python generation_probability.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR [YOUR_TEST_DATA]
 ```
 <!-- The results of the first stage will appear in ./probability_results -->
-The generated results are in the **./probability_results** folder. Then run command below to generate the final submission file.
+The generated results are in the **./probability_results** folder. Then run command below to generate the final submission files.
 ```bash
 python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR [YOUR_TEST_DATA]
 ```
 <!-- DATA.PATH_TO_DATA_DIR: path to Test Dataset (e.g., A2, B) -->
-The generated submission file are saved in **./output** folder.
+The generated submission files are saved in **./output** folder.
 
 #### Quickly reproduce our results on public leaderboard
 If you want to reproduce it quickly, the .npy files for the first stage can be downloaded from [here](https://baidu.com). After downloading, please put these files in ./probability_results. Then run the following command.
