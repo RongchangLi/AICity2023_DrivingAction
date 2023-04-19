@@ -57,8 +57,8 @@ def main():
                             "expand_zero"
                            ]:
                 for split in [
-                    # 'new_spllit_by_id_A1_total',
-                              'new_spllit_by_id_A1_20'
+                    'new_split_by_id_A1_total',
+                    #           'new_split_by_id_A1_20'
                               ]:
                     for view in [
                         "dashboard",
