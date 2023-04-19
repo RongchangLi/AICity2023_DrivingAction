@@ -18,7 +18,7 @@ cd Preprocessing
  -->
 First, download the training data and annotation files (A1), which are provided by 2023 AICity Challenge. Then put the downloaded data into **YOUR_DATA_PATH**.
 As there exists some errors in the official annotaion files 'user_id_86356.csv', we recommand to replace it by our modified files saved in  [Preprocessing/A1_new_annotation](Preprocessing/A1_new_annotation).
-Next modify the __data_homepath__ parameter in [Preprocessing/cut_video.py](Preprocessing/cut_video.py#L31) and [Preprocessing/create_csv.py](Preprocessing/create_csv.py) as your own data path.
+Next modify the __data_homepath__ parameter in [Preprocessing/cut_video.py](Preprocessing/cut_video.py#L31) and [Preprocessing/create_csv.py](Preprocessing/create_csv.py#L6) as your own data path.
 
 After finishing the preparations, run commands below to cut original long training videos into meaningful segments (It needs about 04 hours.) <!-- the splitted data can be download [here](www.baidu.com)(for accessable person only)) -->:
 ```bash
@@ -104,7 +104,7 @@ For custom dataset, please put the videos to be tested in the YOUR_TEST_DATA fol
 >       * ...
 >     * video_ids.csv
 ### Reproduce
-To reproduce our results, you should run all the experiments in the [Train/exp/aicity3](Train/exp/aicity3) folder. We recommend to directly download our pretrianed checkpoints can be downloaded [here](https://baidu.com). It includes all the checkpoints of different trainning datatypes, camera views and sampling strategy.
+To reproduce our results, you should run all the experiments in the [Train/exp/aicity3](Train/exp/aicity3) folder. We recommend to directly download our pretrianed checkpoints [here](https://baidu.com). It includes all the checkpoints of different trainning datatypes, camera views and sampling strategy.
 After training or downloading all the checkpoints, please put them into the [Inference/checkpoint_submit](Inference/checkpoint_submit) folder.
 Then organize the A2 dataset provided by 2023 AI City Challenge as mentioned manner above.
 
