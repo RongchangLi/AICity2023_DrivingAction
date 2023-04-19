@@ -128,11 +128,11 @@ def ensemble_results(cfg, videoids):
         overlap_ratio = [0,0.25,0.5,0.75]
         sample_rate1 = [4, 8, 12]
         sample_rate2 = [2, 4, 6]
-        frame_nums = [8]
+        frame_nums = [8,16]
         npynum = 0
         use_gussion = True
         views = ['dashboard', 'rearview', 'right']
-        datatypes = ['original']
+        datatypes = ['original','expand']
         zeros_pad = [np.zeros((1, 16))]
         npyloader = []
         gussion_weights = []
@@ -241,7 +241,7 @@ def ensemble_results(cfg, videoids):
 
         total_prob_sq[values[0]] = fusion_result
 
-    return dict(sorted(total_prob_sq.items())), video_order, npynum
+    return dict(sorted(total_prob_sq.items())), video_order
 
 
 def get_classification(sequence_class_prob):
