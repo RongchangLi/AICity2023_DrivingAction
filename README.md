@@ -1,6 +1,6 @@
 
 
-This repo is the solution for 7th AICITY (2023) Challenge Track 3 - Naturalistic Driving Action Recognition.
+This repo is the solution for 7th [AICITY](https://www.aicitychallenge.org/2023-challenge-tracks/) (2023) Challenge Track 3 - Naturalistic Driving Action Recognition.
 ![framework](framework.png)
 
 ## Running environment
@@ -104,7 +104,7 @@ For custom dataset, please put the videos to be tested in the YOUR_TEST_DATA fol
 >       * ...
 >     * video_ids.csv
 ### Reproduce
-To reproduce our results, you should run all the experiments in the [Train/exp/aicity3](Train/exp/aicity3) folder. We recommend to directly download our pretrianed checkpoints [here](https://baidu.com). It includes all the checkpoints of different trainning datatypes, camera views and sampling strategy.
+To reproduce our results, you should run all the experiments in the [Train/exp/aicity3](Train/exp/aicity3) folder. We recommend to directly download our pretrianed checkpoints [here](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=share_link). It includes all the checkpoints of different trainning datatypes, camera views and sampling strategy.
 After training or downloading all the checkpoints, please put them into the [Inference/checkpoint_submit](Inference/checkpoint_submit) folder.
 Then organize the A2 dataset provided by 2023 AI City Challenge as mentioned manner above.
 
@@ -127,7 +127,7 @@ python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRA
 The generated submission files are saved in [Inference/output](Inference/output) folder.
 
 #### Quickly reproduce our results on public leaderboard
-If you want to reproduce it quickly, the .npy files for the first stage can be downloaded from [here](https://baidu.com). After downloading, please put these files in ./probability_results. Then run the following command.
+If you want to reproduce it quickly, the .npy files for the first stage can be downloaded from [here](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=share_link). After downloading, please put these files in ./probability_results. Then run the following command.
 
 ```bash
 python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR [YOUR_TEST_DATA]
