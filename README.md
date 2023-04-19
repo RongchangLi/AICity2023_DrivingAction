@@ -8,7 +8,7 @@ This repo is the solution for 7th AICITY (2023) Challenge Track 3 - Naturalistic
 Please refer to the [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) to prepare the running environment.
 
 ## Preprocessing
-Please run command below to go into the training folder:
+Please run command below to go into the preprocessing folder:
 ```bash
 cd Preprocessing
 ```
