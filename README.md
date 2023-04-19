@@ -44,17 +44,17 @@ Finally, the total structure of YOUR_DATA_PATH should be the same as follows:
 
 ## Train
 It needs 2 RTX3090 GPUS ( totally 48G ) to perform the training experiments.
-
 First, run this command to go into the training folder.
 ```bash
 cd Train
 ```
+Then download [X3D_l weights](https://dl.fbaipublicfiles.com/pyslowfast/x3d_models/x3d_l.pyth) pretrained on kinetics-400 and put it in [Train/pretrain](Train/pretrain).
 In the [Train/exp/aicity3](Train/exp/aicity3) folder, there are experiment folders to train all of our used models.
 To train a model, you should first specify the **DATA.PATH_TO_DATA_DIR** in the **run.sh** files as your path (should be YOUR_DATA_PATH/A1_cut_video).
 
 Then please run:
 ```
-CUDA_VISIBLE_DEVICES=[your_GPU_indexes] python exp/aicity3/[EXPERIMENTS_FOLDER]/run.sh
+CUDA_VISIBLE_DEVICES=[your_GPU_indexes] bash exp/aicity3/[EXPERIMENTS_FOLDER]/run.sh
 ```
 The training results are in the  **EXPERIMENTS_FOLDER**, the structure of which is shown as follows:
 >   * EXPERIMENTS_FOLDER

@@ -21,10 +21,18 @@
 - moviepy: (optional, for visualizing video on tensorboard) `conda install -c conda-forge moviepy` or `pip install moviepy`
 - PyTorchVideo: `pip install pytorchvideo`
 - Decord: `pip install decord`
+- detectron2
+```
+ git clone https://github.com/facebookresearch/detectron2 detectron2_repo
+ pip install -e detectron2_repo
+```
 
-## Build
-
+## Install
 After having the above dependencies, run:
 ```
-python setup.py build develop
+git clone https://github.com/RongchangLi/AICity2023_DrivingAction.git
+cd AICity2023_DrivingAction/
+cd Train/
 ```
+You can run `python setup.py build develop` to build slowfast 
+or run `export PYTHONPATH=./slowfast:$PYTHONPATH`to add this repository to $PYTHONPATH.
