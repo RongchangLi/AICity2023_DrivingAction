@@ -35,4 +35,8 @@ cd AICity2023_DrivingAction/
 cd Train/
 ```
 You can run `python setup.py build develop` to build slowfast 
+
 or run `export PYTHONPATH=./slowfast:$PYTHONPATH`to add this repository to $PYTHONPATH.
+
+
+**Now you can use the environment to run the training and inference codes.**
