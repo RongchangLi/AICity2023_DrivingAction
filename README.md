@@ -80,7 +80,7 @@ Please put the videos to be tested in the **YOUR_TEST_DATA** folder. And organiz
 >       * CAMERAVIEW_user_id_*.MP4
 >       * ...
 >     * video_ids.csv
-### Reproduce
+### Reproduce (also suitable for custom videos)
 To reproduce our results, we recommend directly downloading the **_checkpoint_submit_expand.zip_** and **_checkpoint_submit_original.zip_** in [Google Driver](https://github.com/OpenGVLab/UniFormerV2). It includes all the checkpoints of different training manners, camera views, and sampling strategies.
 You can also run all the experiments in the [Train/exp/aicity3](Train/exp/aicity3) folder. But it will cost much more time and you should also rename the pretrained checkpoint _checkpoint_epoch_000**.pyth_ to the format _TRAINMANNER_VIEW_frame*_rate*.pyth_.
 
