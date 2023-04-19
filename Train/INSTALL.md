@@ -22,7 +22,7 @@
 - PyTorchVideo: `pip install pytorchvideo`
 - Decord: `pip install decord`
 
-## Build UniFormerV2
+## Build
 
 After having the above dependencies, run:
 ```

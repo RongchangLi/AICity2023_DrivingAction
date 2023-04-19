@@ -5,7 +5,7 @@ This repo is the solution for 7th [AICITY](https://www.aicitychallenge.org/2023-
 
 ## Running environment
 
-Please refer to the [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) to prepare the running environment.
+Please refer to the [INSTALL](Train/INSTALL.md) to prepare the running environment.
 
 ## Preprocessing
 Please run command below to go into the preprocessing folder:
