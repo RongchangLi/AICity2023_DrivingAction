@@ -104,7 +104,7 @@ python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRA
 The generated submission files are saved in the [Inference/output](Inference/output) folder.
 
 #### Quickly reproduce our results on public leaderboard
-If you want to reproduce it quickly, you can download the **probability_results.zip** files from [Google drive](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=sharing) or [baidu drive](https://pan.baidu.com/s/155jB0oRBERVIquoSmSYJCQ?pwd=oqq3). After downloading, please unzip and put these files in ./probability_results. Then run the following command.
+If you want to reproduce it quickly, you can download the **probability_results.zip** files from [Google drive](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=sharing) or [baidu drive](https://pan.baidu.com/s/155jB0oRBERVIquoSmSYJCQ?pwd=oqq3). After downloading, please unzip and put these files in [Inference/probability_results](Inference/probability_results). Then run the following command.
 
 ```bash
 python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR [YOUR_TEST_DATA]
