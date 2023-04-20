@@ -81,7 +81,7 @@ Please put the videos to be tested in the **YOUR_TEST_DATA** folder. And organiz
 >       * ...
 >     * video_ids.csv
 ### Reproduce (also suitable for custom videos)
-To reproduce our results, we recommend directly downloading the **_checkpoint_submit_expand.zip_** and **_checkpoint_submit_original.zip_** in [Google Driver](https://github.com/OpenGVLab/UniFormerV2). It includes all the checkpoints of different training manners, camera views, and sampling strategies.
+To reproduce our results, we recommend directly downloading the **_checkpoint_submit_expand.zip_** and **_checkpoint_submit_original.zip_** in [Google Driver](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=sharing). It includes all the checkpoints of different training manners, camera views, and sampling strategies.
 You can also run all the experiments in the [Train/exp/aicity3](Train/exp/aicity3) folder. But it will cost much more time and you should also rename the pretrained checkpoint _checkpoint_epoch_000**.pyth_ to the format _TRAINMANNER_VIEW_frame*_rate*.pyth_.
 
 After downloading all the checkpoints, please put them into the [Inference/checkpoint_submit](Inference/checkpoint_submit) folder.
@@ -102,7 +102,7 @@ python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRA
 The generated submission files are saved in the [Inference/output](Inference/output) folder.
 
 #### Quickly reproduce our results on public leaderboard
-If you want to reproduce it quickly, the .npy files for the first stage can be downloaded from [here](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=share_link). After downloading, please put these files in ./probability_results. Then run the following command.
+If you want to reproduce it quickly, the .npy files for the first stage can be downloaded from [here](https://drive.google.com/drive/folders/1ZqcT_Z3rqEXrTSe3k_WpYpmhHBPAgnCF?usp=sharing). After downloading, please put these files in ./probability_results. Then run the following command.
 
 ```bash
 python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRAIN.ENABLE False DATA.PATH_TO_DATA_DIR [YOUR_TEST_DATA]
