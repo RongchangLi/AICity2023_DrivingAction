@@ -58,4 +58,4 @@ DATA_LOADER:
   PIN_MEMORY: True
 NUM_GPUS: 1
 RNG_SEED: 0
-OUTPUT_DIR: 'checkpoint_right_24026'
+OUTPUT_DIR: ''
