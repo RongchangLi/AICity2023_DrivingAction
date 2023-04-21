@@ -111,6 +111,11 @@ python inference_finalresult.py --cfg configs/Kinetics/X3D_L.yaml NUM_GPUS 1 TRA
 ```
 
 
+
+## Contact
+
+If you have any questions, feel free to contact Rongchang Li (li_rongchang@stu.jiangnan.edu.cn).
+
 ## Acknowledgement
 
 This repository is built based on [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) and [Winner of 2022](https://github.com/VTCC-uTVM) repository.
