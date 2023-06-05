@@ -121,6 +121,6 @@ If you have any questions, feel free to contact Rongchang Li (li_rongchang@stu.j
 
 ## Acknowledgement
 
-This repository is built based on [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) and [Winner of 2022](https://github.com/VTCC-uTVM) repository.
+This repository is built based on [UniFormerv2](https://github.com/OpenGVLab/UniFormerV2) and [Winner of 2022](https://github.com/VTCC-uTVM/2022AICityChallenge-Track3) repository.
 
 
