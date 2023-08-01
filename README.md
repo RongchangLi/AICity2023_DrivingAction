@@ -1,5 +1,5 @@
 # Action Probability Calibration for Efficient Naturalistic Driving Action Localization
-This repo is the solution of **(Team id:60, Team name: JNU_boat)** for 7th [AICITY](https://www.aicitychallenge.org/2023-challenge-tracks/) (2023) Challenge Track 3 - Naturalistic Driving Action Recognition.
+This repo is the **runner-up** solution of **(Team id:60, Team name: JNU_boat)** for 7th [AICITY](https://www.aicitychallenge.org/2023-challenge-tracks/) (2023) Challenge Track 3 - Naturalistic Driving Action Recognition.
 We rank the **2nd** on the public leaderboard.
 
 It is also the repo for paper [Action Probability Calibration for
